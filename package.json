@@ -1,0 +1,19 @@
+{
+  "name": "shouganaiyo-loader",
+  "version": "1.0.0",
+  "description": "Frida-based tool to add Java agents at runtime on JVMs, including those running with runtime attach disabled.",
+  "bin": {
+    "shouganaiyo-loader": "./bin/cli.js"
+  },
+  "scripts": {
+  },
+  "author": "Jeff Dileo <jeff.dileo@nccgroup.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "commander": "^8.3.0",
+    "frida": "^15.1.14",
+    "mustache": "^4.2.0"
+  },
+  "devDependencies": {
+  }
+}

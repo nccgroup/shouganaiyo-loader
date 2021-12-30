@@ -1,0 +1,7 @@
+from adoptopenjdk:11.0.10_9-jdk-openj9-0.24.0-focal as jdk11
+
+from node:16
+
+COPY --from=jdk11 /opt/java/openjdk /opt/java/openjdk
+
+RUN ln -s /opt/java/openjdk/bin/j* /usr/bin/

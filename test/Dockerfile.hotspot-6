@@ -1,0 +1,7 @@
+from openjdk:6-jdk as jdk6
+
+from node:16
+
+COPY --from=jdk6 /usr/lib/jvm /usr/lib/jvm
+
+RUN ln -s /usr/lib/jvm/java-6-openjdk-amd64/bin/j* /usr/bin/

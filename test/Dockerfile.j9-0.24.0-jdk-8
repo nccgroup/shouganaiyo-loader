@@ -1,0 +1,7 @@
+from adoptopenjdk:8u282-b08-jdk-openj9-0.24.0-focal as jdk8
+
+from node:16
+
+COPY --from=jdk8 /opt/java/openjdk /opt/java/openjdk
+
+RUN ln -s /opt/java/openjdk/bin/j* /usr/bin/

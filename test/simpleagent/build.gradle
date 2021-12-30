@@ -1,0 +1,41 @@
+plugins {
+  id 'java'
+}
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+
+}
+
+sourceSets {
+  main {
+    java {
+      srcDirs = ['./src']
+    }
+
+    resources {
+      srcDirs = ['./res']
+    }
+  }
+}
+
+jar {
+  manifest {
+    attributes (
+      "Manifest-Version": "1.0",
+      "Can-Redefine-Classes": "true",
+      "Can-Retransform-Classes": "true",
+      "Can-Set-Native-Method-Prefix": "true",
+      "Premain-Class": "trust.nccgroup.simpleagent.AgentEntry",
+      "Agent-Class": "trust.nccgroup.simpleagent.AgentEntry"
+    )
+  }
+}
+
+defaultTasks "jar"

@@ -1,0 +1,7 @@
+from openjdk:8-jdk as jdk8
+
+from node:16
+
+COPY --from=jdk8 /usr/local/openjdk-8 /usr/local/openjdk-8
+
+RUN ln -s /usr/local/openjdk-8/bin/j* /usr/bin/

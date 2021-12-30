@@ -1,0 +1,7 @@
+from adoptopenjdk:16_36-jdk-openj9-0.25.0-focal as jdk16
+
+from node:16
+
+COPY --from=jdk16 /opt/java/openjdk /opt/java/openjdk
+
+RUN ln -s /opt/java/openjdk/bin/j* /usr/bin/
